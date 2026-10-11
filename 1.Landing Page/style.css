@@ -1,0 +1,291 @@
+/* ---------- Reset & Variables ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brown-dark: #3e2723;
+  --brown: #6f4e37;
+  --orange: #e07a2f;
+  --cream: #fff8f0;
+  --cream-dark: #f5e9da;
+  --text: #3b3b3b;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--cream);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--brown-dark);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--brown-dark), var(--brown));
+  color: var(--white);
+  text-align: center;
+  padding: 110px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  color: var(--cream-dark);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+  padding: 14px 34px;
+  border-radius: 50px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  background: #c9671f;
+  transform: translateY(-2px);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--cream-dark);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--brown-dark);
+  margin-bottom: 12px;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-sub {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ---------- Cards Grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: var(--brown);
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.quote p {
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.quote cite {
+  color: var(--orange);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ---------- About ---------- */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 360px;
+}
+
+.about-text p {
+  margin-bottom: 14px;
+}
+
+.about-stats {
+  flex: 1 1 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.stat {
+  background: var(--white);
+  padding: 24px 12px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--orange);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--brown-dark);
+  color: var(--cream-dark);
+  padding: 50px 0 20px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer h3,
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: var(--orange);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .nav-inner {
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+}

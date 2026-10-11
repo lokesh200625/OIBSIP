@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.converter {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.7rem;
+  color: #1e3c72;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #ccd3e0;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2a5298;
+}
+
+input.invalid {
+  border-color: #e53935;
+}
+
+.error {
+  color: #e53935;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+  margin-top: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2a5298;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #1e3c72;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.result {
+  margin-top: 24px;
+  padding: 18px;
+  background: #f1f5fb;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.result[hidden] {
+  display: none;
+}
+
+.result h2 {
+  font-size: 1.1rem;
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #d9e1ef;
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-row strong {
+  color: #1e3c72;
+}
+
+@media (max-width: 480px) {
+  .converter {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
